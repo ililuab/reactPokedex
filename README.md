@@ -2,7 +2,9 @@
 React app made with PokeAPI
 
 how to see site:
+
 cd reactPokedex
+
 npm run dev
 
 
