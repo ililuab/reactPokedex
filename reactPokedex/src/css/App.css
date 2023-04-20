@@ -78,6 +78,7 @@ html {
   align-items: center;
 }
 
+
 .pokedexcontainer {
   width: 85vw;
   height: 550px;
@@ -89,4 +90,19 @@ html {
 
 input {
   width: 100%;
+}
+
+.github-sidebar {
+  width: 25%;
+  height: 100%;
+  background: rgb(155,229,134);
+  background: linear-gradient(0deg, rgba(155,229,134,1) 0%, rgba(58,85,51,1) 100%);
+}
+
+.github-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 75%;
+  height: 100%;
 }

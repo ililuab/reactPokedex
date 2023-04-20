@@ -3,8 +3,7 @@ import '../css/App.css';
 import '../fonts/Pocketmonk.otf';
 import Pokemon from '../components/Pokemon';
 import Header from '../components/Header';
-import { Routes, Route, Link, Outlet } from 'react-router-dom';
-import Github from './Github';
+import NavBar from '../components/Navbar';
 
 const App = () => {
   const [pokemonList, setPokemonList] = useState([]);
@@ -39,27 +38,14 @@ const App = () => {
     });
   }, [pokemonList]);
 
-  <Routes>
-    <Route exact path='/' component={App} />
-    <Route path='/github' component={Github} />
-  </Routes>
-
   return (
     <div className='outercontainer'>
       <div className='innercontainer'>
-        <div>
-          <Link to='/'>Home</Link>
-          <Link to='/github'>Github</Link>
-        </div>
+        <NavBar></NavBar>
         <Header></Header>
         <div className='pokedexcontainer'>
           <div className='searchbar'>
-            <input
-              type='text'
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder='Zoeken'
-            />
+            <input type='text' value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder='Zoeken' />
           </div>
           <div className='container'>
             <div className='row'>
@@ -70,9 +56,6 @@ const App = () => {
                 ))}
             </div>
           </div>
-        </div>
-        <div>
-          <Outlet />
         </div>
       </div>
     </div>
